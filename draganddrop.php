@@ -26,7 +26,7 @@ try {
         foreach ($dataArray as $item) {
             try {
                 // Prepare the SQL statement
-                $stmt = $conn->prepare("INSERT INTO piatto (nome, data, tipo_id) VALUES (:nome, :data, :tipo)");
+                $stmt = $conn->prepare("INSERT INTO piatto (nome, data, idTipoPiatto) VALUES (:nome, :data, :tipo)");
 
                 // Bind the parameters
                 $stmt->bindParam(':nome', $item['nome']);
